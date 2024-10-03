@@ -22,22 +22,29 @@ import { FiFacebook } from "react-icons/fi";
 import { IoLogoInstagram } from "react-icons/io";
 import { TbBrandYoutube } from "react-icons/tb";
 import Cart from "../Components/Cart"
+import Shop from './Shop';
 
 const Main_page = () => {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
-
+  const [showmore,setShoreMore] = useState(false)
   
   const toggleCart = () => {
     
     setIsCartOpen(!isCartOpen);
   };
 
+  const showProducts = ()=>{
+      setShoreMore(true)
+  }
+
 
   return (
     <div className='flex flex-col'>
       <Navbar onCartClick={toggleCart} />
       <Cart isOpen={isCartOpen} onClose={toggleCart} />
+      {!showmore ? (
+        <>
       <div className=' mx-48 w-[1120px]'>
         <Carousel data-bs-theme="light" className="custom-carousel" style={{ height: '500px' }}>
           <Carousel.Item style={{ height: '536px' }}>
@@ -110,9 +117,11 @@ const Main_page = () => {
             <div className=' flex flex-col mx-52 w-[1300px]'>
               <div className='flex mt-4 mb-4 items-center justify-between w-[1050px]'>
                 <div className='font-semibold w-24 text-4xl'>New Arrivals</div>
-                <div className="relative">
-                  <div className='flex items-center gap-2'>
-                  <div className="text-lg font-semibold">More Products </div>
+                <div className="relative" onClick={()=>{
+                  setShoreMore(true)
+                }}>
+                  <div className='flex items-center gap-2 cursor-pointer'>
+                  <div className="text-lg font-semibold">More Products</div>
                   <FaArrowRightLong />
                   </div>
                   
@@ -188,7 +197,9 @@ const Main_page = () => {
               </div>
               </div>
               
-            </div>
+            </div></>):(
+              <Shop/>
+            )}
         </div>
     
   );
