@@ -23,12 +23,12 @@
 
 
 .chair-image {
-  position: relative; /* Make the chair image relative for positioning logo */
+  position: relative;
 }
 
 .logo-container {
   position: absolute;
-  top: 20px; /* Adjust this value as needed */
+  top: 20px; 
   left: 50%;
   z-index: 10;
   transform: translateX(-50%);
@@ -39,52 +39,52 @@
 
 .custom-carousel .carousel-control-prev,
 .custom-carousel .carousel-control-next {
-  top: 50%; /* Position arrows in the vertical center */
-  transform: translateY(-50%); /* Adjust position to center */
-  background-color: rgba(255, 255, 255, 0.5); /* Background color for arrows */
-  border-radius: 50%; /* Rounded arrows */
-  width: 40px; /* Width of the arrows */
-  height: 40px; /* Height of the arrows */
+  top: 50%;
+  transform: translateY(-50%); 
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
 }
 
 .custom-carousel .carousel-control-prev-icon,
 .custom-carousel .carousel-control-next-icon {
-  filter: invert(1); /* Change arrow color to white */
+  filter: invert(1); 
 }
 
 .custom-carousel .carousel-indicators [data-bs-target] {
-  background-color: rgba(255, 255, 255, 0.5); /* Background color for dots */
-  border-radius: 50%; /* Make dots circular */
-  width: 8px; /* Width of the dots */
-  height: 8px; /* Height of the dots */
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 50%; 
+  width: 8px; 
+  height: 8px; 
   transition: all 0.3s ease; 
 }
 
 .custom-carousel .carousel-indicators .active {
-  background-color: white; /* Color of the active dot */
-  border-radius: 20px; /* Make active indicator a rectangle */
-  width: 30px; /* Width of the active rectangle */
-  height: 8px; /* Height of the active rectangle */
+  background-color: white; 
+  border-radius: 20px; 
+  width: 30px; 
+  height: 8px; 
 }
 
-/* Add this to your CSS file */
+
 .scrollbar-custom {
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color:black #edf2f7; /* Customize thumb and track colors */
+  scrollbar-width: thin; 
+  scrollbar-color:black #edf2f7; 
   
 }
 
 .image-gallery::-webkit-scrollbar {
-  width: 5px; /* Adjust scrollbar thickness */
-  height: 5px; /* Adjust scrollbar height */
+  width: 5px; 
+  height: 5px; 
   margin-top: 10px;
 }
 
 .image-gallery::-webkit-scrollbar-thumb {
-  background-color: black; /* Set thumb color */
-  border-radius: 4px; /* Round the thumb corners */
+  background-color: black; 
+  border-radius: 4px; 
 }
 
 .image-gallery::-webkit-scrollbar-track {
-  background-color: #f0f0f0; /* Set track color */
+  background-color: #f0f0f0; 
 }

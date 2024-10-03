@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Navbar from '../Components/Navbar';
 import Carousel from 'react-bootstrap/Carousel';
 import LivingCard from "../asserts/images/LivingCard.png"
@@ -21,39 +21,52 @@ import { Link } from 'react-router-dom';
 import { FiFacebook } from "react-icons/fi";
 import { IoLogoInstagram } from "react-icons/io";
 import { TbBrandYoutube } from "react-icons/tb";
+import Cart from "../Components/Cart"
+
 const Main_page = () => {
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  
+  const toggleCart = () => {
+    
+    setIsCartOpen(!isCartOpen);
+  };
+
+
   return (
     <div className='flex flex-col'>
-      <Navbar />
+      <Navbar onCartClick={toggleCart} />
+      <Cart isOpen={isCartOpen} onClose={toggleCart} />
       <div className=' mx-48 w-[1120px]'>
         <Carousel data-bs-theme="light" className="custom-carousel" style={{ height: '500px' }}>
           <Carousel.Item style={{ height: '536px' }}>
             <img
-              className="d-block w-100 h-100" // Set height to 100% of the parent
+              className="d-block w-100 h-100" 
               src="https://plus.unsplash.com/premium_photo-1682582243285-8478309a7cdb?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="First slide"
-              style={{ objectFit: 'cover', height: '100%' }} // Cover the carousel area
+              style={{ objectFit: 'cover', height: '100%' }} 
             />
           </Carousel.Item>
           <Carousel.Item style={{ height: '536px' }}>
             <img
               className="d-block w-100 h-100"
-              src="https://images.unsplash.com/photo-1595846265893-f433f6cca81d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnVybml0dXJlJTIwZGVzaWdufGVufDB8fDB8fHww"
+              src="https://plus.unsplash.com/premium_photo-1683120975679-dbca0a428106?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Second slide"
-              style={{ objectFit: 'cover', height: '100%' }} // Cover the carousel area
+              style={{ objectFit: 'cover', height: '100%' }} 
             />
           </Carousel.Item>
           <Carousel.Item style={{ height: '536px' }}>
             <img
               className="d-block w-100 h-100"
-              src="https://media.istockphoto.com/id/1194478942/photo/elegant-and-comfortable-living-room.jpg?s=2048x2048&w=is&k=20&c=EiGbI1whKy6O3tLP24zUpnFodm25hWuEfBQj5djQ6Es="
+              src="https://images.unsplash.com/photo-1634547588713-edd93045b9f1?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Third slide"
-              style={{ objectFit: 'cover', height: '100%' }} // Cover the carousel area
+              style={{ objectFit: 'cover', height: '100%' }} 
             />
           </Carousel.Item>
         </Carousel>
 
-        {/* Adding margin-top to ensure space below the carousel */}
+        
         
       </div>
       

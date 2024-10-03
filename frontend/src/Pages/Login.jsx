@@ -23,7 +23,7 @@ const [userData, setData] = useState('');
     <div className='flex-row top-[10rem] px-10 absolute'>
       <div className="font-semibold text-3xl mb-4">Sign In</div>
       <div className="text-[12px]">
-        Don't have an account yet? <a href='/register' className="text-green-500 font-semibold text-sm" >Sign up </a>
+        Don't have an account yet? <a href='/register' className="text-green-500 font-semibold text-sm no-underline" >Sign up </a>
       </div>
         <div className='mt-2 mb-2 flex flex-col w-full'>
             {/* <label >Your username or email address</label> */}

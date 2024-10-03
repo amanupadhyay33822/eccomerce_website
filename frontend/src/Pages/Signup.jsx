@@ -9,7 +9,7 @@ const [showPwd, setShowPwd] = useState(false);
 const [userData, setData] = useState('');
   return (
     <div className="grid grid-cols-2 ">
-  {/* Left Side: Logo and Image */}
+  
   <div className="flex flex-col justify-center items-center relative">
     <div className="logo-container absolute ">
       <img src={Logo} alt="Logo" className="z-10" />
@@ -19,12 +19,12 @@ const [userData, setData] = useState('');
     </div>
   </div>
 
-  {/* Right Side: Sign Up Form */}
+ 
   <div className="flex w-64">
     <div className='flex-row top-[10rem] px-10 absolute'>
       <div className="font-semibold text-3xl mb-4">Sign Up</div>
       <div className="text-[12px]">
-        Already have an account? <a href='/' className="text-green-500 font-semibold text-sm" >Sign in</a>
+        Already have an account? <a href='/' className="text-green-500 font-semibold text-sm no-underline" >Sign in</a>
       </div>
         <div className='mt-2 mb-2 flex flex-col w-full'>
             {/* <label >Your username or email address</label> */}
