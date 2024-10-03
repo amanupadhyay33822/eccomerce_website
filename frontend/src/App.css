@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+ 
+}
+.main-container img {
+  width: 100%; 
+  
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.chair-image {
+  position: relative; /* Make the chair image relative for positioning logo */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-container {
+  position: absolute;
+  top: 20px; /* Adjust this value as needed */
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+
+
+
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  top: 50%; /* Position arrows in the vertical center */
+  transform: translateY(-50%); /* Adjust position to center */
+  background-color: rgba(255, 255, 255, 0.5); /* Background color for arrows */
+  border-radius: 50%; /* Rounded arrows */
+  width: 40px; /* Width of the arrows */
+  height: 40px; /* Height of the arrows */
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  filter: invert(1); /* Change arrow color to white */
+}
+
+.custom-carousel .carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.5); /* Background color for dots */
+  border-radius: 50%; /* Make dots circular */
+  width: 8px; /* Width of the dots */
+  height: 8px; /* Height of the dots */
+  transition: all 0.3s ease; 
+}
+
+.custom-carousel .carousel-indicators .active {
+  background-color: white; /* Color of the active dot */
+  border-radius: 20px; /* Make active indicator a rectangle */
+  width: 30px; /* Width of the active rectangle */
+  height: 8px; /* Height of the active rectangle */
+}
+
+/* Add this to your CSS file */
+.scrollbar-custom {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color:black #edf2f7; /* Customize thumb and track colors */
+  
+}
+
+.image-gallery::-webkit-scrollbar {
+  width: 5px; /* Adjust scrollbar thickness */
+  height: 5px; /* Adjust scrollbar height */
+  margin-top: 10px;
+}
+
+.image-gallery::-webkit-scrollbar-thumb {
+  background-color: black; /* Set thumb color */
+  border-radius: 4px; /* Round the thumb corners */
+}
+
+.image-gallery::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Set track color */
 }
