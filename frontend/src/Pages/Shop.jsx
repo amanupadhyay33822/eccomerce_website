@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import home_shop from '../asserts/images/home_Shop.png';
 import { IoIosArrowForward } from "react-icons/io";
 import product1 from "../asserts/images/Product Card1.png";
@@ -15,9 +15,14 @@ import product11 from "../asserts/images/Product Card (11).png";
 import product12 from "../asserts/images/Product Card (12).png";
 import Footer_top from '../Components/Footer_top';
 import Footer from '../Components/Footer';
+import Products from './Products';
+
 const Shop = () => {
+  const [showmore,setShowMore]=useState(false)
   return (
     <div>
+      {!showmore ? (
+      <>
       <div className="relative">
         <div className='mx-48 w-[1120px]'>
           <img src={home_shop} alt='' className='w-full h-auto' />
@@ -46,10 +51,13 @@ const Shop = () => {
         <img src={product12} alt='' />
       </div>
 
-      {/* Center the button using flex */}
-      <div className='flex justify-center mt-4 mb-8'>
+      
+      <div className='flex justify-center mt-4 mb-8 cursor-pointer' onClick={()=>{setShowMore(true)}}>
         <button className='border-2 border-black rounded-full py-2 px-8 text-black'>Show More</button>
       </div>
+      </>):(
+        <Products/>
+      )}
       <Footer_top/>
       <Footer/>
     </div>
