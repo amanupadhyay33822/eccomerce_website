@@ -4,6 +4,7 @@ import ShoppingCart from '../Components/ShoppingCart';
 import { FaCheck } from "react-icons/fa6";
 import CheckoutDetails from '../Components/CheckoutDetails';
 import OrderDetails from '../Components/OrderDetails';
+import Footer from "../Components/Footer"
 const Booking = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('Shopping cart'); 
@@ -48,7 +49,7 @@ const Booking = () => {
                 className={`inline-block p-4 border-b-2  rounded-t-lg ${
                  (activeTab === 'Shopping cart' || isCheckedOut) ? (isCheckedOut ? 'border-green-500' : 'border-black text-black') : 'text-gray-600 border-gray-300'
                 }`}
-                onClick={() => handleTabClick('Shopping cart')}
+                //onClick={() => handleTabClick('Shopping cart')}
                 type="button"
                 role="tab"
                 aria-selected={activeTab === 'Shopping cart'}
@@ -78,7 +79,7 @@ const Booking = () => {
                 className={`inline-block p-4 border-b-2 rounded-t-lg ${
                   (activeTab === 'Checkout details' || isPlacedOrder) ? (isPlacedOrder ? 'border-green-500' : 'border-black text-black') : 'text-gray-600 border-gray-300'
                 }`}
-                onClick={() => handleTabClick('Checkout details')}
+                //onClick={() => handleTabClick('Checkout details')}
                 type="button"
                 role="tab"
                 aria-selected={activeTab === 'Checkout details'}
@@ -106,7 +107,7 @@ const Booking = () => {
                 className={`inline-block p-4 border-b-2 rounded-t-lg ${
                   activeTab === 'Order complete' ? 'border-black text-black' : 'text-gray-600 border-gray-300'
                 }`}
-                onClick={() => handleTabClick('Order complete')}
+                //onClick={() => handleTabClick('Order complete')}
                 type="button"
                 role="tab"
                 aria-selected={activeTab === 'Order complete'}
@@ -156,6 +157,7 @@ const Booking = () => {
           
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
